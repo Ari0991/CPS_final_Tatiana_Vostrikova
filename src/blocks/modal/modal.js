@@ -9,7 +9,6 @@ const modalBlockCallback = modalBlock[1]
 const modalBlurCallback = document.querySelectorAll('.modal__blur')
 const BlurFeedback = modalBlock[0]
 const BlurCallback = modalBlock[1]
-console.log(modalBlurCallback)
 
 const closeButtonModal = document.querySelectorAll('.modal__button')
 
