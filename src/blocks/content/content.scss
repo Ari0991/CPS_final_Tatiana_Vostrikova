@@ -116,6 +116,7 @@
       scroll-snap-type: y mandatory;
       padding: 0;
       margin-bottom: 0;
+      padding-bottom: 24px;
       background-color: $low-white;
       list-style-type: none;
       white-space: nowrap;
@@ -462,7 +463,6 @@
     }
   }
 
-  /* footer */
   .footer {
     margin-left: 320px;
     padding: 32px;
