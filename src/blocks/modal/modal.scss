@@ -1,0 +1,238 @@
+.modal {
+  &__block {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    transform: translateX(none);
+    transition: transform 0.8s;
+    z-index: 150;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &--active {
+    transform: none;
+  }
+
+  &--hidden {
+    transform: translateX(100%);
+  }
+
+  &__blur {
+    min-height: 690px;
+    width: 100%;
+    background: $white;
+    opacity: 0.96;
+    z-index: 150;
+  }
+
+  &__container {
+    border-left: none;
+    position: relative;
+    min-width: 100%;
+    min-height: 690px;
+    background-color: $white;
+    box-shadow: -2px 0px 4px $black-container, 16px 0px 52px $black-container2;
+    z-index: 150;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  &__button {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    position: relative;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    flex-shrink: 0;
+    border: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+
+    &::before {
+      content: "";
+      top: 13px;
+    }
+    &::after {
+      content: "";
+      top: 13px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      transform: translateY(-4px);
+      width: 4px;
+      height: 40px;
+      background-color: $blue;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input-box {
+    padding-bottom: 16px;
+  }
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    background: transparent;
+    outline: none;
+    background: $white;
+    border: 1px solid $light-grey;
+    border-radius: 8px;
+    width: 288px;
+    height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+
+    &:focus {
+      border: 1px solid $grey;
+    }
+
+    &::backdrop {
+      border: 1px solid $grey;
+    }
+    &::placeholder {
+      font-family: "TT Lakes";
+      font-size: 16px;
+      line-height: 24px;
+      color: $not-active-grey;
+
+      vertical-align: middle;
+    }
+    &::-webkit-input-placeholder {
+      font-family: "TT Lakes";
+      font-size: 16px;
+      line-height: 24px;
+      color: $not-active-grey;
+      vertical-align: middle;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      font-family: "TT Lakes";
+      font-size: 16px;
+      line-height: 24px;
+      color: $not-active-grey;
+      vertical-align: middle;
+      opacity: 1;
+    }
+  }
+
+  &__textarea {
+    width: 288px;
+    height: 118px;
+    resize: none;
+  }
+  &__disclaimer {
+    font-weight: 500;
+    color: $grey;
+    width: 288px;
+  }
+
+  &__disclaimer-button {
+    appearance: none;
+    width: 136px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: $pink;
+    border: none;
+
+    &-text {
+      font-family: "TT Lakes";
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: -0.15px;
+      text-transform: uppercase;
+      color: $white;
+      vertical-align: middle;
+      padding-right: 8px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        transform: rotate(45deg);
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid $white;
+        border-right: 2px solid $white;
+        border-radius: 1px;
+        transition: border-color 0.3s;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $pink;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    &__container {
+      min-width: 440px;
+      border-left: 1px solid $light-blue;
+    }
+
+    &__content {
+      margin-top: 40px;
+      padding: 32px;
+      padding-top: 0;
+    }
+
+    &__button {
+      position: absolute;
+      left: -80px;
+      top: 32px;
+    }
+
+    &__input {
+      width: 376px;
+    }
+
+    &__textarea {
+      width: 376px;
+    }
+    &__disclaimer {
+      width: 376px;
+    }
+  }
+}

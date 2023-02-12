@@ -1,0 +1,50 @@
+.devices-swiper {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 74px;
+    width: 24px;
+    height: 162px;
+    background: linear-gradient(270deg, $low-white 16.84%, $black 100%);
+    z-index: 3;
+  }
+
+  &__card {
+    position: relative;
+    min-height: 160px;
+  }
+
+  &__button {
+    &--read-more {
+      display: none;
+    }
+  }
+}
+
+.devices-swiper {
+  .swiper__card-button {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .devices-swiper {
+    &::after {
+      display: none;
+    }
+
+    & &__button {
+      &--read-more {
+        display: block;
+      }
+    }
+
+    & .swiper-wrapper {
+      overflow: hidden;
+    }
+  }
+}

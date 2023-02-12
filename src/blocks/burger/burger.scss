@@ -1,0 +1,234 @@
+.burger {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.4s, opacity 0.4s;
+
+  z-index: 100;
+
+  &--visible {
+    transform: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    padding: 0;
+    min-width: 320px;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: $white;
+    box-shadow: 16px 0px 52px $black-container2, -2px 0 4px 0 $black-container2;
+
+    z-index: 100;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__blur {
+    min-height: 1690px;
+    width: 100%;
+    background: $white;
+    height: 0;
+    z-index: 95;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+
+  &--hidden {
+    transform: translateX(-100%);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18.7px 24px 0px;
+  }
+
+  &__logo {
+    flex-grow: 2;
+    padding-left: 16px;
+  }
+
+  &__button {
+    position: relative;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    transition: transform 0.4s, color 0.4s;
+
+    z-index: 1;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__nav {
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    list-style: none;
+
+    &-item {
+      position: relative;
+      padding-bottom: 24px;
+      padding-left: 16px;
+
+      &::before {
+        content: "";
+        background-color: none;
+        transition: all 0.3s;
+        z-index: 0;
+      }
+
+      &:hover {
+        &::before {
+          position: absolute;
+          left: 0;
+          top: -3px;
+          content: "";
+          width: 3px;
+          height: 32px;
+          background-color: $dark-blue;
+          border-radius: 0 5px 5px 0;
+          vertical-align: middle;
+          opacity: 1;
+          z-index: 2;
+        }
+      }
+    }
+  }
+  &__link {
+    &:focus-within {
+      &::before {
+        position: absolute;
+        left: 0;
+        top: -3px;
+        content: "";
+        width: 3px;
+        height: 32px;
+        background-color: $blue;
+        border-radius: 0 5px 5px 0;
+        vertical-align: middle;
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+  }
+  &__footer {
+    padding-left: 24px;
+    margin-bottom: 32px;
+  }
+  &__lang-switcher {
+    &:nth-child(2) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    width: 152px;
+    margin-bottom: 16px;
+  }
+
+  &__contacts {
+    &--email {
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    &--phone {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 32px;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  &__lang-switcher {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 86px;
+
+    &--active {
+      color: $grey;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359.99px) {
+  .burger {
+    &__container {
+      min-width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 1119.99px) {
+  .burger {
+    &__container {
+      min-width: 320px;
+    }
+
+    &__nav-item {
+      padding-left: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .header {
+    order: 1;
+  }
+
+  .burger {
+    position: static;
+    transform: none;
+    margin-right: auto;
+    height: auto;
+
+    &__blur {
+      display: none;
+    }
+
+    &__logo {
+      padding-left: 0;
+    }
+
+    &__nav-item {
+      padding-bottom: 32px;
+    }
+
+    & .button--close {
+      display: none;
+    }
+
+    &__footer {
+      margin-top: 268px;
+    }
+  }
+}
