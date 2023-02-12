@@ -1213,6 +1213,7 @@ html {
           scroll-snap-type: y mandatory;
       padding: 0;
       margin-bottom: 0;
+      padding-bottom: 24px;
       background-color: #f8f8f8;
       list-style-type: none;
       white-space: nowrap;
@@ -1445,7 +1446,6 @@ html {
           display: inline; }
         .content .article__text--hidden-end {
           display: inline; }
-  /* footer */
   .footer {
     margin-left: 320px;
     padding: 32px; }
@@ -1489,7 +1489,7 @@ html {
     justify-content: space-between;
     top: 0;
     padding: 0;
-    min-width: 320px;
+    min-width: 100%;
     height: 100vh;
     overflow-y: auto;
     background-color: #ffffff;
@@ -1565,7 +1565,8 @@ html {
     z-index: 1; }
   .burger__footer {
     padding-left: 24px;
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    padding-bottom: 24px; }
   .burger__lang-switcher:nth-child(2) {
     padding-left: 16px;
     padding-right: 16px; }
@@ -1592,8 +1593,8 @@ html {
     .burger__lang-switcher--active {
       color: #7e7e82; }
 
-@media screen and (min-width: 320px) and (max-width: 359.99px) {
-  .burger__container {
+@media screen and (max-width: 359.99px) {
+  __container {
     min-width: 100%; } }
 
 @media screen and (min-width: 360px) and (max-width: 1119.99px) {
