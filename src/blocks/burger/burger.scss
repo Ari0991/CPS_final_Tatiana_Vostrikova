@@ -127,7 +127,7 @@
         content: "";
         width: 3px;
         height: 32px;
-        background-color: $blue;
+        background-color: $dark-blue;
         border-radius: 0 5px 5px 0;
         vertical-align: middle;
         opacity: 1;
@@ -135,6 +135,14 @@
       }
     }
   }
+
+  // &__logo {
+  //   &:hover {
+  //     &::before {
+
+  //     }
+  //   }
+  // }
   &__footer {
     padding-left: 24px;
     margin-bottom: 32px;
