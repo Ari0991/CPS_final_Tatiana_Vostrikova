@@ -1611,6 +1611,8 @@ html {
     transform: none;
     margin-right: auto;
     height: auto; }
+    .burger__container {
+      min-width: 320px; }
     .burger__blur {
       display: none; }
     .burger__logo {
