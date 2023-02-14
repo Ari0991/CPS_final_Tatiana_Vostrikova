@@ -209,6 +209,9 @@
     margin-right: auto;
     height: auto;
 
+    &__container {
+      min-width: 320px;
+    }
     &__blur {
       display: none;
     }
