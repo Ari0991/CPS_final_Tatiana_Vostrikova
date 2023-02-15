@@ -42,12 +42,12 @@ let readMoreContentDevices = readMoreDevices.addEventListener(
       swiperWrapperDevices.classList.add('swiper-wrapper--max-height')
 
       readMoreTextDevices.textContent = 'Скрыть'
-      buttonIconDevices.style.transform = 'rotate(180deg)'
+      buttonIconDevices.classList.add('button__icon--reverse')
     } else {
       swiperWrapperDevices.classList.add('swiper-wrapper--hide-content')
       swiperWrapperDevices.classList.remove('swiper-wrapper--max-height')
       readMoreTextDevices.textContent = 'Показать все'
-      buttonIconDevices.style.transform = 'rotate(0deg)'
+      buttonIconDevices.classList.remove('button__icon--reverse')
     }
   }
 )

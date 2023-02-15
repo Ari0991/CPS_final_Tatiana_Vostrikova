@@ -36,11 +36,11 @@ let readMoreContent = readMore.addEventListener('click', function () {
   if (!isContentHide) {
     swiperWrapper.classList.remove('swiper-wrapper--hide-content')
     readMoreText.textContent = 'Скрыть'
-    buttonIcon.style.transform = 'rotate(180deg)'
+    buttonIcon.classList.add('button__icon--reverse')
   } else {
     swiperWrapper.classList.add('swiper-wrapper--hide-content')
     swiperWrapper.classList.remove('swiper-wrapper--max-height')
     readMoreText.textContent = 'Показать все'
-    buttonIcon.style.transform = 'rotate(0deg)'
+    buttonIcon.classList.remove('button__icon--reverse')
   }
 })

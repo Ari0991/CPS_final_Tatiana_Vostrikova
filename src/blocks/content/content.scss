@@ -193,6 +193,10 @@
     height: 12px;
     margin-right: 8px;
 
+    &--reverse {
+      transform: rotate(180deg);
+    }
+
     &:hover {
       cursor: pointer;
     }
