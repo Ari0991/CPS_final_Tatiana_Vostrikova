@@ -35,13 +35,8 @@ let readMoreContent = readMore.addEventListener('click', function () {
   )
   if (!isContentHide) {
     swiperWrapper.classList.remove('swiper-wrapper--hide-content')
-    // swiperWrapper.classList.add('swiper-wrapper--max-height')
-    if (window.innerWidth >= 1120) {
-      readMoreText.textContent = 'Скрыть'
-      buttonIcon.style.transform = 'rotate(180deg)'
-    } else {
-      readMore.classList.add('hidden--button')
-    }
+    readMoreText.textContent = 'Скрыть'
+    buttonIcon.style.transform = 'rotate(180deg)'
   } else {
     swiperWrapper.classList.add('swiper-wrapper--hide-content')
     swiperWrapper.classList.remove('swiper-wrapper--max-height')

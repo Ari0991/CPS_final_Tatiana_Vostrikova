@@ -130,11 +130,7 @@
         display: none;
       }
     }
-    &__pagination {
-      height: 10px;
-      margin-left: 42px;
-      z-index: 5;
-    }
+
     &-pagination {
       &-bullet {
         background: $pagination-bullet;

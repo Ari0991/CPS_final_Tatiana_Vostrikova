@@ -40,13 +40,10 @@ let readMoreContentDevices = readMoreDevices.addEventListener(
     if (!isContentHideDevices) {
       swiperWrapperDevices.classList.remove('swiper-wrapper--hide-content')
       swiperWrapperDevices.classList.add('swiper-wrapper--max-height')
-      if (window.innerWidth >= 1120) {
-        readMoreTextDevices.textContent = 'Скрыть'
-        buttonIconDevices.style.transform = 'rotate(180deg)'
-      } else {
-        readMoreDevices.classList.add('hidden--button')
-      }
-    } else if (isContentHideDevices) {
+
+      readMoreTextDevices.textContent = 'Скрыть'
+      buttonIconDevices.style.transform = 'rotate(180deg)'
+    } else {
       swiperWrapperDevices.classList.add('swiper-wrapper--hide-content')
       swiperWrapperDevices.classList.remove('swiper-wrapper--max-height')
       readMoreTextDevices.textContent = 'Показать все'

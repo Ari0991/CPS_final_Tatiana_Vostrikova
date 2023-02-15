@@ -33,13 +33,13 @@
     width: 100%;
     background: $white;
     opacity: 0.96;
-    z-index: 150;
+    z-index: 120;
   }
 
   &__container {
     border-left: none;
     position: relative;
-    min-width: 100%;
+    min-width: 320px;
     min-height: 690px;
     background-color: $white;
     box-shadow: -2px 0px 4px $black-container, 16px 0px 52px $black-container2;
@@ -72,11 +72,9 @@
 
     &::before {
       content: "";
-      top: 13px;
     }
     &::after {
       content: "";
-      top: 13px;
     }
   }
 
@@ -150,6 +148,15 @@
       color: $not-active-grey;
       vertical-align: middle;
       opacity: 1;
+    }
+
+    &:not(:placeholder-shown) {
+      &:valid {
+        border: 1px solid $green;
+      }
+      &:invalid {
+        border: 1px solid $red;
+      }
     }
   }
 

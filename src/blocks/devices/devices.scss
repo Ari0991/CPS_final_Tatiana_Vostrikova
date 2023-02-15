@@ -42,7 +42,9 @@
         display: block;
       }
     }
-
+    &__pagination {
+      display: none;
+    }
     & .swiper-wrapper {
       overflow: hidden;
     }

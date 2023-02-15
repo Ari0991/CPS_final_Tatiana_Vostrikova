@@ -7,16 +7,16 @@ const burgerButtonInteractive = burgerButton.addEventListener(
   'click',
   function () {
     burgerMenu.classList.add('burger--visible')
-    burgerBlur.style.opacity = '0.96'
-
-    closeButton.addEventListener('click', function () {
-      burgerMenu.classList.remove('burger--visible')
-      burgerBlur.style.opacity = '0'
-    })
-
-    burgerBlur.addEventListener('click', function () {
-      burgerMenu.classList.remove('burger--visible')
-      burgerBlur.style.opacity = '0'
-    })
+    burgerBlur.classList.add('burger--opacity')
   }
 )
+
+closeButton.addEventListener('click', function () {
+  burgerMenu.classList.remove('burger--visible')
+  burgerBlur.classList.remove('burger--opacity')
+})
+
+burgerBlur.addEventListener('click', function () {
+  burgerMenu.classList.remove('burger--visible')
+  burgerBlur.classList.remove('burger--opacity')
+})

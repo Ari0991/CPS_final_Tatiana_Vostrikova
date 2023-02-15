@@ -96,7 +96,9 @@ html {
             width: 21.73px;
             height: 2.17px;
             background-color: $white;
-            transform: translate(-11px, 7px) rotate(45deg);
+            top: 50%;
+            right: 25%;
+            transform: rotate(45deg);
             border-radius: 1px;
         }
         &::after {
@@ -105,7 +107,9 @@ html {
             width: 21.73px;
             height: 2.17px;
             background-color: $white;
-            transform: translate(-11px, 7px) rotate(-45deg);
+            top: 50%;
+            right: 25%;
+            transform: rotate(-45deg);
             border-radius: 1px;
         }
     }
@@ -115,7 +119,7 @@ html {
             position: absolute;
 
             background: url(../.././src/img/icon/search.svg) no-repeat;
-            transform: translate(-9px, -1px);
+            transform: translate(10px, 10px);
             width: 20px;
             height: 20px;
         }
@@ -145,8 +149,9 @@ html {
 }
 
 .swiper-pagination-horizontal {
+    display: flex;
     height: 10px;
-    margin-left: 42px;
+    justify-content: center;
     z-index: 5;
 }
 .swiper-slide {
