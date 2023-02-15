@@ -1273,6 +1273,8 @@ html {
   width: 8px;
   height: 12px;
   margin-right: 8px; }
+  .button__icon--reverse {
+    transform: rotate(180deg); }
   .button__icon:hover {
     cursor: pointer; }
 
