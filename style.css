@@ -1985,7 +1985,9 @@ html {
   .price-swiper__disclaimer {
     margin-top: 8px; }
   .price-swiper__disclaimer-text {
-    margin: 0; } }
+    margin: 0; }
+  .price-swiper__pagination {
+    display: none; } }
 
 @media screen and (min-width: 1120px) {
   .price-swiper__card:nth-child(n + 3)::after {
