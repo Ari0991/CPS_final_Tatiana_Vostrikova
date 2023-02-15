@@ -1999,7 +1999,9 @@ html {
     margin-top: 16px; }
   .price-swiper__disclaimer-button {
     margin-top: 16px;
-    margin-bottom: 16px; } }
+    margin-bottom: 16px; }
+  .price-swiper__pagination {
+    display: none; } }
 
 .modal__block {
   position: fixed;
